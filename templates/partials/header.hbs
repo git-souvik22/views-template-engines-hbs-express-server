@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> HEADER PART </title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Food<span>.</span></a>
+        <div class="menuToggle" onclick="toggleMenu()"></div>
+        <ul class="navigation">
+            <li><a href="/" onclick="toggleMenu()">Home</a></li>
+            <li><a href="/about" onclick="toggleMenu()">About</a></li>
+            <li><a href="#menu" onclick="toggleMenu()">Menu</a></li>
+            <li><a href="#expert" onclick="toggleMenu()">Expert</a></li>
+            <li><a href="#testimonials" onclick="toggleMenu()">Testimonials</a></li>
+            <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </ul>
+    </header>
+
+        <script type="text/javascript">
+        window.addEventListener('scroll', function(){
+            const header = document.querySelector("header");
+            header.classList.toggle("sticky", window.scrollY > 0);
+        });
+
+        function toggleMenu(){
+            const menuToggle = document.querySelector('.menuToggle');
+            const navigation = document.querySelector('.navigation');
+            menuToggle.classList.toggle('active');
+            navigation.classList.toggle('active');
+        }
+    </script>
+    
+    </body>
+    </html>
